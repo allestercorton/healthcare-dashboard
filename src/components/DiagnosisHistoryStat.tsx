@@ -11,7 +11,7 @@ const DiagnosisHistoyStat: React.FC<IDiagnosisHistoyStatProps> = ({
 }) => {
   return (
     <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mt-4 mb-[0.9rem]'>
-      <div className='p-4 bg-[#E0F3FA] text-[#072635] rounded-xl'>
+      <div className='p-4 bg-[#E0F3FA] text-[#072635] rounded-xl flex flex-col items-center lg:items-start'>
         <img
           src={respiratoryIcon}
           alt='Respiratory'
@@ -32,7 +32,7 @@ const DiagnosisHistoyStat: React.FC<IDiagnosisHistoyStatProps> = ({
             : 'N/A'}
         </div>
       </div>
-      <div className='p-4 bg-[#FFE6E9] text-[#072635] rounded-xl'>
+      <div className='p-4 bg-[#FFE6E9] text-[#072635] rounded-xl flex flex-col items-center lg:items-start'>
         <img
           src={temperatureIcon}
           alt='Temperature'
@@ -53,7 +53,7 @@ const DiagnosisHistoyStat: React.FC<IDiagnosisHistoyStatProps> = ({
             : 'N/A'}
         </div>
       </div>
-      <div className='p-4 bg-[#FFE6F1] text-[#072635] rounded-xl'>
+      <div className='p-4 bg-[#FFE6F1] text-[#072635] rounded-xl flex flex-col items-center lg:items-start'>
         <img
           src={heartRateIcon}
           alt='Heart Rate'

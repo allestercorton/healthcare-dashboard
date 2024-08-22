@@ -14,8 +14,8 @@ const DiagnosisHistoryLevel: React.FC<IDiagnosisHistoryLevelProps> = ({
   averageDiastolic,
 }) => {
   return (
-    <div className='bg-[#F4F0FE] rounded-xl flex flex-row space-x-4 p-2'>
-      <div className='flex-1 w-1/3'>
+    <div className='bg-[#F4F0FE] w-full rounded-xl flex flex-col lg:flex-row space-y-4 lg:space-x-4 p-2'>
+      <div className='flex-1 w-full lg:w-1/3'>
         <div className='flex flex-row justify-between mb-4'>
           <div>
             <h2 className='text-[#072635] text-[18px] font-bold'>
@@ -23,8 +23,9 @@ const DiagnosisHistoryLevel: React.FC<IDiagnosisHistoryLevelProps> = ({
             </h2>
           </div>
           <div className='flex items-center'>
-            <p className='text-[14px] text-gray-600'>Last</p>
+            <p className=':text-[14px] text-gray-600'>Last</p>
             <select
+              name='month-range'
               value={monthRange}
               onChange={handleMonthRangeChange}
               className='text-[14px] text-gray-600 bg-transparent border-none outline-none cursor-pointer'
@@ -43,8 +44,8 @@ const DiagnosisHistoryLevel: React.FC<IDiagnosisHistoryLevelProps> = ({
           diastolicValues={diastolicValues}
         />
       </div>
-      <div className='flex-none w-1/4'>
-        <div className='flex flex-col space-y-4 mb-4'>
+      <div className='flex-none w-full lg:w-1/4'>
+        <div className='flex flex-row justify-around lg:flex-col lg:space-y-4 mb-0'>
           <BloodPressureSummary
             type='Systolic'
             value={systolicValues[systolicValues.length - 1]}
@@ -54,7 +55,7 @@ const DiagnosisHistoryLevel: React.FC<IDiagnosisHistoryLevelProps> = ({
             )}
             color='bg-blue-500'
           />
-          <div className='w-full border-t-2 border-gray-300 my-6'></div>
+          <div className='hidden lg:block w-full border-t-2 border-gray-300 my-6'></div>
           <BloodPressureSummary
             type='Diastolic'
             value={diastolicValues[diastolicValues.length - 1]}

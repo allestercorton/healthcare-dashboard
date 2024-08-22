@@ -48,7 +48,7 @@ const Patients: React.FC<IPatientOnclickProps> = ({
           />
         </div>
       )}
-      <div className='max-h-[54rem] overflow-y-auto custom-scrollbar pr-1'>
+      <div className='max-h-[13rem] xl:max-h-[57rem] overflow-y-auto custom-scrollbar pr-1'>
         {filteredPatients.map((patient, index) => (
           <div
             key={index}

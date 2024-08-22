@@ -36,18 +36,18 @@ const App: React.FC = () => {
   return (
     <div className='min-h-screen min-w-screen bg-[#F6F7F8] p-5'>
       {!isDataLoading && <Navbar />}
-      <div className='w-full flex flex-row space-x-7 mt-6'>
-        <div className='w-1/4'>
+      <div className='w-full flex flex-col space-y-7 xl:space-y-0 xl:flex-row xl:space-x-7 mt-6'>
+        <div className='w-full xl:w-1/4'>
           {!isDataLoading && data && (
             <Patients patients={data} onPatientClick={setSelectedPatient} />
           )}
         </div>
-        <div className='w-1/2'>
+        <div className='w-full xl:w-1/2'>
           {!isDataLoading && selectedPatient && (
             <DiagnosisHistory patient={selectedPatient} />
           )}
         </div>
-        <div className='w-1/4'>
+        <div className='w-full xl:w-1/4'>
           {!isDataLoading && selectedPatient && (
             <PatientDetails patient={selectedPatient} />
           )}

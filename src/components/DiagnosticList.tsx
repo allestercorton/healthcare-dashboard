@@ -4,11 +4,11 @@ import { IPatientProps } from '../types/patientType';
 const PatientsDiagnosticList: React.FC<IPatientProps> = ({ patient }) => {
   return (
     <div className='bg-white shadow-sm rounded-xl p-4 h-30%'>
-      <div className='max-h-[15rem] overflow-y-auto custom-scrollbar'>
+      <div>
         <h2 className='text-[#072635] text-[24px] font-bold mb-6'>
           Diagnosis List
         </h2>
-        <div className='overflow-x-auto'>
+        <div className='max-h-[15rem] overflow-y-auto custom-scrollbar'>
           <table className='min-w-full bg-white shadow-md rounded-lg text-[14px]'>
             <thead className='bg-[#F6F7F8]'>
               <tr>

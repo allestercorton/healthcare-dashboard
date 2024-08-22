@@ -4,9 +4,9 @@ import downloadIcon from '../assets/svg/download_FILL0_wght300_GRAD0_opsz24 (1).
 
 const LabResults: React.FC<IPatientProps> = ({ patient }) => {
   return (
-    <div className='max-h-[13.9rem] overflow-y-auto custom-scrollbar text-[#072635]'>
+    <div className=' text-[#072635]'>
       <h2 className='text-[24px] font-bold mb-6'>Lab Results</h2>
-      <ul>
+      <ul className='max-h-[13.9rem] overflow-y-auto custom-scrollbar'>
         {patient.lab_results.length > 0 ? (
           patient.lab_results.map((result, index) => (
             <li
