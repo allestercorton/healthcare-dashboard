@@ -34,7 +34,7 @@ const App: React.FC = () => {
   const isDataLoading = isLoading || !data || !selectedPatient;
 
   return (
-    <div className='min-h-screen min-w-screen bg-[#F6F7F8] p-5'>
+    <div className='min-h-screen min-w-screen bg-[#F6F7F8] lg:p-5'>
       {!isDataLoading && <Navbar />}
       <div className='w-full flex flex-col space-y-7 xl:space-y-0 xl:flex-row xl:space-x-7 mt-6'>
         <div className='w-full xl:w-1/4'>

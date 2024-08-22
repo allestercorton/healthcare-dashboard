@@ -12,13 +12,13 @@ const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className='w-full h-[72px] bg-white rounded-full flex justify-between items-center p-[18px] shadow-sm'>
+    <div className='w-full h-[60px] lg:h-[72px] bg-white rounded-full flex justify-between items-center p-[18px] shadow-sm'>
       {/* Logo */}
       <img
         src={logo}
         alt='Logo'
         onClick={() => window.location.reload()}
-        className='w-[160px] xl:w-[170px] h-[45px] xl:h-[45px] cursor-pointer'
+        className='w-[140px] xl:w-[170px] h-[45px] xl:h-[45px] cursor-pointer'
       />
 
       {/* Nav Links */}
